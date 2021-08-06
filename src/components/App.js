@@ -31,7 +31,7 @@ class App extends Component {
     // Load account
     const accounts = await web3.eth.getAccounts()
     this.setState({ account: accounts[0] })
-    const networkId = await web3.eth.net.getId()
+    const networkId = 4
     const networkData = Marketplace.networks[networkId]
     if(networkData) {
       const marketplace = web3.eth.Contract(Marketplace.abi, networkData.address)
