@@ -5,35 +5,27 @@ class Main extends Component {
   render() {
     return (
       <div id="content">
-        <h1>Add Product</h1>
-        <form onSubmit={(event) => {
-          event.preventDefault()
-          const name = this.productName.value
-          const price = window.web3.utils.toWei(this.productPrice.value.toString(), 'Ether')
-          this.props.createProduct(name, price)
-        }}>
-          <div className="form-group mr-sm-2">
-            <input
-              id="productName"
-              type="text"
-              ref={(input) => { this.productName = input }}
-              className="form-control"
-              placeholder="Product Name"
-              required />
-          </div>
-          <div className="form-group mr-sm-2">
-            <input
-              id="productPrice"
-              type="text"
-              ref={(input) => { this.productPrice = input }}
-              className="form-control"
-              placeholder="Product Price"
-              required />
-          </div>
-          <button type="submit" className="btn btn-primary">Add Product</button>
-        </form>
         <p>&nbsp;</p>
-        <h2>Buy Product</h2>
+        <h2><strong>Shuttle Ticket Classes</strong></h2>
+		<table className="table">
+		<tbody>
+		<tr>
+		<th >Budget</th>
+		<th >Economy</th>
+		<th >Business</th>
+		<th >VIP / First Class</th>
+		</tr>
+		<tr>
+		<td>We had space left over on the shuttle with the luggage and animals. Beggars can't be choosey here.</td>
+		<td>A step up from Budget, you get a clean seat and a couple meals to keep your sugar regulated.</td>
+		<td>Here's where the luxury begins. Travel in style and grace as you have nice seats and the ability to use the bathroom.</td>
+		<td>This class basically makes you royalty. Entertainers from Earth travelling had their trip comped by performing for you.</td>
+		</tr>
+		</tbody>
+		</table>
+        <p>&nbsp;</p>
+        <h2>Purchase Ticket for Shuttle</h2>
+		<p>Check the inventory of remaining tickets to "Get to the Moon" below.</p>
         <table className="table">
           <thead>
             <tr>
